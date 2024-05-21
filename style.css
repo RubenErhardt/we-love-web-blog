@@ -4,13 +4,39 @@ body, html {
     font-family: Arial, sans-serif;
     background: #f0f0f0;
     padding: 20px;
+    scroll-behavior: smooth;
 }
-
-nav{
+nav {
     display: flex;
     justify-content: right;
-    gap: 5px;
+    gap: 15px;
+    list-style-type: none;
 }
+
+nav a {
+    text-decoration: none;
+}
+
+.we-love-web-intro {
+    height: 100vh; /* Volledige viewport-hoogte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0; /* Voorbeeld achtergrondkleur */
+  }
+  
+  .we-love-web-intro h1 {
+    font-size: 4rem; /* Grote lettergrootte voor de hoofdtekst */
+    margin-bottom: 1rem;
+  }
+  
+  .we-love-web-intro p {
+    font-size: 1.5rem; /* Grotere lettergrootte voor de subtekst */
+    max-width: 600px; /* Beperk de breedte voor leesbaarheid */
+  }
+
 
 .we-love-web-articles {
     display: flex;
@@ -52,3 +78,4 @@ article img {
     scrollbar-width: thin; /* Adjust the width of the scrollbar */
     scrollbar-color: #888 #f1f1f1; /* Adjust the colors of the scrollbar thumb and track */
   }
+
