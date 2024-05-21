@@ -6,17 +6,87 @@ body, html {
     padding: 20px;
     scroll-behavior: smooth;
 }
-nav {
+
+:root {
+    --primary-color: #cb1414;
+    --secondary-color: #e6b31e;
+    --accent-color: #2e4057;
+    --background-color: #575656;
+    --text-color: #333333;
+  }
+
+nav  {
     display: flex;
     justify-content: right;
     gap: 15px;
     list-style-type: none;
-}
-
-nav a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav li {
+    margin: 0;
+  }
+  
+  nav a {
     text-decoration: none;
-}
+    color: #333;
+  }
 
+  nav a:hover {
+    color: var(--primary-color);
+    
+  }
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  nav a:focus{
+    outline: 2px solid var(--primary-color); /* Dikte: 2px, Stijl: solid, Kleur: var(--primary-color) */
+  }
+
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+  }
+
+  
+  nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+  
+  span {
+    color: var(--primary-color);
+    animation: breathe 3s infinite;
+    display: inline-block; /* Maak de span een inline-block element */
+    padding: 5px; /* Geef de span wat ruimte */
+  }
+  
 .we-love-web-intro {
     height: 100vh; /* Volledige viewport-hoogte */
     display: flex;
@@ -51,9 +121,8 @@ nav a {
 
 article {
     background: white;
-    border-radius: 8px;
+    border-radius: 15px;
     width: 400px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 article img {
     width: 100%;
@@ -79,3 +148,23 @@ article img {
     scrollbar-color: #888 #f1f1f1; /* Adjust the colors of the scrollbar thumb and track */
   }
 
+
+  
+  .we-love-web-intro p a {
+    color: var(--primary-color);
+  }
+
+  .arrow {
+    animation: bounceArrow 1s infinite;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  @keyframes bounceArrow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
