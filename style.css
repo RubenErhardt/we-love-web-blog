@@ -3,8 +3,11 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     background: #f0f0f0;
-    padding: 20px;
     scroll-behavior: smooth;
+}
+
+body{
+    padding: 10px;
 }
 
 :root {
@@ -23,6 +26,7 @@ nav  {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #f0f0f0;
     right: 0;
     z-index: 100;
     padding: 15px;
@@ -113,7 +117,14 @@ nav  {
     overflow-x: auto;
     scroll-behavior: smooth;
   }
-
+.upcoming{
+    font-size: 1.5rem; /* Grotere lettergrootte voor de subtekst */
+    max-width: 600px; /* Beperk de breedte voor leesbaarheid */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
   .we-love-web-articles article {
     flex: 0 0 auto;
     margin-right: 20px; /* Adjust the spacing between articles */
@@ -121,9 +132,49 @@ nav  {
 
 article {
     background: white;
-    border-radius: 15px;
-    width: 400px;
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    margin-left: 2px;
+    padding: 20px;
 }
+
+article:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    outline: 0.1em solid var(--primary-color);
+  }
+
+  article {
+    position: relative;
+  }
+  
+  article h2 {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  article:hover h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 2rem);
+    height: calc(100% + 2rem);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  article:hover h2::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
 article img {
     width: 100%;
     height: auto;
@@ -167,4 +218,10 @@ article img {
     50% {
       transform: translateY(5px);
     }
+  }
+
+
+  .we-love-web-upcoming h1{
+    margin-top: 500px;
+    background-color: red;
   }
