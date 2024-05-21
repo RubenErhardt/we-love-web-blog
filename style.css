@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+}
+
+.we-love-web-articles {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .we-love-web-articles article {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust the spacing between articles */
+  }
+
+article {
+    background: white;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+article img {
+    width: 100%;
+    height: auto;
+}
+
+.we-love-web-articles::-webkit-scrollbar {
+    height: 8px; /* Adjust the height of the scrollbar */
+  }
+  
+  .we-love-web-articles::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Adjust the color of the scrollbar track */
+  }
+  
+  .we-love-web-articles::-webkit-scrollbar-thumb {
+    background-color: #888; /* Adjust the color of the scrollbar thumb */
+    border-radius: 4px; /* Adjust the border radius of the scrollbar thumb */
+  }
+  
+  /* Firefox */
+  .we-love-web-articles {
+    scrollbar-width: thin; /* Adjust the width of the scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Adjust the colors of the scrollbar thumb and track */
+  }
