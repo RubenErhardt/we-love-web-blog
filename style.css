@@ -146,6 +146,7 @@ article {
 article:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     outline: 0.1em solid var(--primary-color);
+    cursor: pointer;
   }
 
   article {
